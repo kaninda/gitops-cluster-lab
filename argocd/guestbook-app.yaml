@@ -4,8 +4,7 @@ metadata:
   name: guestbook
   namespace: argocd
 spec:
-  project: default
-
+  project: guestbook-project
   source:
     repoURL: git@github.com:kaninda/argocd-example-apps.git
     targetRevision: master
