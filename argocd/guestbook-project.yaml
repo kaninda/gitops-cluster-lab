@@ -7,17 +7,22 @@ spec:
   description: Project for guestbook application
   # Repos Git autorisés
   sourceRepos:
-    - git@github.com:kaninda/argocd-example-apps.git
+  - git@github.com:kaninda/argocd-example-apps.git
+  - git@github.com:kaninda/guestbook-app-kustomize.git
   # Destinations autorisées
   destinations:
-    - namespace: guestbook
-      server: https://kubernetes.default.svc
+  - namespace: guestbook
+    server: https://kubernetes.default.svc
+  - namespace: guestbook-kustomize-dev
+    server: https://kubernetes.default.svc
+  - namespace: guestbook-kustomize-prod
+    server: https://kubernetes.default.svc
   # Ressources autorisées (optionnel mais propre)
   clusterResourceWhitelist:
-    - group: ""
-      kind: Namespace
+  - group: ""
+    kind: Namespace
   namespaceResourceWhitelist:
-    - group: apps
-      kind: Deployment
-    - group: ""
-      kind: Service
+  - group: apps
+    kind: Deployment
+  - group: ""
+    kind: Service
