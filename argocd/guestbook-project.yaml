@@ -17,6 +17,10 @@ spec:
     server: https://kubernetes.default.svc
   - namespace: guestbook-kustomize-prod
     server: https://kubernetes.default.svc
+  - namespace: guestbook-helm-dev
+    server: https://kubernetes.default.svc
+  - namespace: guestbook-helm-prod
+    server: https://kubernetes.default.svc
   # Ressources autorisées (optionnel mais propre)
   clusterResourceWhitelist:
   - group: ""
